@@ -1,20 +1,7 @@
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-const surnames = ["White", "Pinkman", "Fring", "Schrader", "Salamanca", "Ehrmantraut", "Goodman"];
-function Surname() {
-  const index = Math.floor(Math.random() * surnames.length);
-  return surnames[index];
-}
-rl.question("Enter your first name: ", (username) => {
-  let firstname = username.split(" ")[0];
-  let prefix = firstname.slice(0, 4);
+const express = require('express');
+const app = express();
+const showRoutes = require('./routes/showRoutes');
 
-  let surname = Surname();
-  let alias = prefix + " " + surname;
-  console.log("Your Breaking Bad alias: " + alias);
+app.use('/', showRoutes);
 
-  rl.close();
-});
+app.listen(8080, () => console.log('Server running on port 8080'));
