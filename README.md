@@ -1,48 +1,34 @@
 # Ramvenkatesh_Gowda_Backend-Node_UC_Interview
-UC Interview
-# Backend Node.js Tasks
+
+UC Interview submission — Backend Node.js tasks.
 
 ## Task 1: Say My Name
-A CLI script that generates a Breaking Bad-style alias from your first name.
+Generates a Breaking Bad-style alias from your name. Takes the first 4 letters of your first name and pairs it with a random surname (White, Pinkman, Fring, Schrader, Salamanca, Ehrmantraut, Goodman). Works even with short names or full names — it just uses the first word.
 
-**How it works:** Takes your first name, extracts the first 4 characters, and combines it with a random surname from a fixed list (White, Pinkman, Fring, Schrader, Salamanca, Ehrmantraut, Goodman).
-
-**Run it:**
 ```
 node index.js
 ```
-Enter your name when prompted.
-
-**Handles:** short names, full names (uses first word only), different alias each run.
-
----
 
 ## Task 2: I Am the One Who Fetches
-An Express API that serves Breaking Bad show data from the [TVMaze API](https://www.tvmaze.com/).
-
-**Structure:** MVC — `routes/` for endpoints, `controllers/` for logic.
-
-**Endpoints:**
+A small Express API that pulls Breaking Bad data from [TVMaze](https://www.tvmaze.com/). Built with MVC structure — routes handle the endpoints, controllers handle the logic.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/show-details` | Main show info |
 | GET | `/episodes` | All episodes |
 
-**Run it:**
 ```
 npm install
 node index.js
 ```
-Then visit:
+
+Then open:
 ```
-http://localhost:3000/show-details
-http://localhost:3000/episodes
+http://localhost:8080/show-details
+http://localhost:8080/episodes
 ```
 
-**Tech:** Node.js, Express, Axios
+**Built with:** Node.js, Express, Axios
 
 ---
-
-## Author
-[Your Name]
+Made by Ram
